@@ -8,8 +8,8 @@ Projects made by myself for studying purpose
 first study on Arduino
 
 * communicating Arduino Uno to ESP32 module
-* communicating ESP32 to MQTT broker server
-* using sensors: 
+* communicating ESP32 to MQTT broker server (broker.hivemq.com)
+* sensors: 
     * dht11 sensor module
     * pir sensor module
     * sound sensor module
