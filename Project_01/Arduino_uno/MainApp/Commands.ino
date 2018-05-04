@@ -24,7 +24,6 @@ void serialCommands(String command) {
     DHTread();
     return;
   }
-  else
-    Serial.println(serialString);
+  
 }
 

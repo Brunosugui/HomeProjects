@@ -1,8 +1,10 @@
 #include <dht.h>
 #include "SoftwareSerial.h"
+#include "IRremote.h"
 
 #define dht_apin A0
 #define ldr_apin A1
+#define irrcv_apin A5
 #define sound_dpin 12
 #define presence_dpin 4
 //#define button1Pin 5
@@ -12,10 +14,11 @@
 
 SoftwareSerial ESP(7, 8); // RX, TX
 
-String serialString = "";
-
 int button1State = HIGH;
 int buttonSet = false;
+
+IRrecv irrecv(irrcv_apin);
+IRsend irsend;
 
 dht DHT;
 
