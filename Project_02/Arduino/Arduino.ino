@@ -17,9 +17,10 @@ void setup() {
   Wire.begin();
 
   lcd.begin (16, 2);
-
-  mySwitch.enableTransmit(transmitter_pin);
-
+  
+  mySwitch.enableReceive(0);
+  
+//mySwitch.enableTransmit(transmitter_pin);
   // Optional set pulse length.
   //mySwitch.setPulseLength(321);
 
@@ -33,12 +34,14 @@ void setup() {
 
   lcd.setBacklight(HIGH);
 
-  printLCD();
+lcd_greetings();
 }
 
 void loop() {
   //i2c_scanner();
 
-  send_RFID_msg();
+  //RFID_send();
+
+  RFID_rcv();
 
 }
